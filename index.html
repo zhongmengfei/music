@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<<!--!&#45;&#45;背景&ndash;&gt;
+<div id="fps"></div>
+<div id="bg_glow"></div>
+<div id="overlay"></div>
+<canvas id="canvas"></canvas>
+-->
+<div class="box">
+    <!--头部-->
+    <header>
+        <div class="container">
+            <h3 class="left">数诺播放器</h3>
+            <p class="right">智能机器人</p>
+        </div>
+    </header>
+    <!--主体部分-->
+    <section>
+       <div class="contaniner">
+           <input type="text" class="search">
+           <ul class="searchUl">
+           </ul>
+       </div>
+    </section>
+    <!--控制条-->
+    <footer>
+        <div class="contaniner">
+            <!--按键-->
+           <div class="btns left">
+               <div class="left prev"></div>
+               <div class="left start"></div>
+               <div class="left next"></div>
+           </div>
+            <!--进度条-->
+            <div class="left bars">
+                <div class="left logo">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="left ctrl-bars-box">
+                    <p>
+                        <span></span>
+                       </p>
+                    <div class="ctrl-bars">
+                        <div class="nowBars"></div>
+                        <div class="ctrl-btn">
+                            <div class="ctrl-btn-small"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left times">
+                    <span class="nowTime">00:00</span>
+                    /
+                    <span class="totalTime">00:00</span>
+                </div>
+            </div>
+            <!--音量,模式-->
+            <div class="left modes">
+                <div class="left voice"></div>
+                <div class="left mode"></div>
+                <div class="left play-list"></div>
+            </div>
+        </div>
+        <div class="play-list-box">
+            <div class="list-header">
+                播放列表
+            </div>
+            <ul>
+            </ul>
+        </div>
+    </footer>
+</div>
+<div class="mask"></div>
+<div class="info"></div>
+<audio></audio>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
+<!--<script src="js/bg.js"></script>-->
+<script src="js/index.js"></script>
+
+<script>
+    var flag=false;
+    $('.play-list').on('click',function () {
+        flag=!flag;
+        if(flag){$('.play-list-box').animate({
+            bottom:46
+        },300);
+        }else{
+            $('.play-list-box').animate({
+                bottom:-300
+            },300);
+        }
+
+
+    })
+</script>
+</html>

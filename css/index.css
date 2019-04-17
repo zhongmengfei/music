@@ -1,0 +1,297 @@
+﻿/*清楚默认样式*/
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style-type:none;
+}
+.container{
+    width:85%;
+    margin:0 auto;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.box{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 99;
+}
+/*头部开始*/
+header{
+    height:40px;
+    line-heiht:40px;
+    color:#fff;
+    position:fixed;
+    left: 0;
+    top:0;
+    z-index: 9999;
+    right: 0;
+    background-color: #4f4f4f;
+
+}
+/*头部结束*/
+
+/*主体开始*/
+section .search{
+    width:300px;
+    height:30px;
+    display:block;/*转块*/
+    border-radius:6px;/*表示变圆角*/
+    border:1px solid #6900ff;
+    text-indent:10px;/*文字向右移动*/
+    outline:none;/*表示去掉圆角多余部分*/
+    margin:50px auto;
+}
+section ul{
+    width:40%;
+    margin:0 auto;
+    padding:10px;
+    border:1px solid #ccc;
+    background-color:#f5f5f5;
+    opacity:0.6;
+    border-radius:10px;
+}
+section ul li{
+    height:25px;
+    line-height:25px;
+    padding:5px 10px;
+    color:#000;
+    font-size:13px;
+    cursor:pointer;/*鼠标放上去变小手*/
+    opacity:1;
+    border-bottom:1px dashed #ccc;
+}
+section ul li:hover{
+    color:#ff0f13;
+}
+/*主体结束*/
+
+
+/*控制条开始*/
+footer{
+    width:100%;
+    height:46px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background: url("../img/p.png");
+}
+footer .btns{
+    margin-left:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+}
+footer .btns .prev{
+    width:28px;
+    height:28px;
+    background:url("../img/p.png") 0px -123px;
+}
+footer .btns .prev:hover{
+    background-position-x:-30px;
+}
+footer .btns .start{
+    width:36px;
+    height:36px;
+    margin:0 10px;
+    background:url("../img/p.png") 0px -197px;
+}
+footer .btns .start:hover{
+    background-position-x:-40px;
+}
+footer .btns .next{
+    width:28px;
+    height:28px;
+    background:url("../img/p.png") -80px -123px;
+}
+footer .btns .next:hover{
+    background-position-x:-110px;
+}
+/*进度条*/
+footer .bars .logo{
+    width:36px;
+    height:36px;
+    margin-top:5px;
+    margin-left:20px;
+}
+footer .bars .logo img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+footer .ctrl-bars-box{
+    font-size:12px;
+    color: #ffff;
+    margin: 5px 10px;
+}
+footer .ctrl-bars-box p span{
+    margin: 0 5px;
+}
+footer .ctrl-bars-box .ctrl-bars{
+    width:400px;
+    height:6px;
+    border-radius:3px;
+    background-color:#535353;
+    position:relative;
+    top:7px;
+    left:5px;
+}
+footer .ctrl-bars-box .ctrl-bars .nowBars{
+    width:0px;
+    height:6px;
+    border-radius:3px;
+    background-color:#C70C0C;
+    position:absolute;
+    top:0;
+    left:0;
+}
+footer .ctrl-bars-box .ctrl-bars .ctrl-btn{
+     width:10px;
+    height:10px;
+    border-radius:50%;
+    position:absolute;
+    background-color: #F3F3F3;
+    top:-2px;
+    left:-5px;
+/*    box-shadow: 0px 0px 5x #ccc;*/
+ }
+
+footer .bars .times{
+    color: #fff;
+    font-size: 12px;
+    margin: 22px 10px;
+}
+
+/*音量，模式*/
+footer .modes{
+    height: 46px;
+    display: flex;
+    align-items:center;
+}
+footer .modes .voice{
+    width:25px;
+    height: 25px;
+    background: url("../img/p.png") 0px -240px;
+}
+footer .modes .voice:hover{
+background-position-x:-29px;
+}
+footer .modes .mode{
+    width:25px;
+    height: 25px;
+    margin: 0px 10px;
+    background: url("../img/p.png") 0px -336px;
+}
+footer .modes .mode:hover{
+    background-position-x:-30px;
+}
+footer .modes .play-list{
+    width:59px;
+    height: 35px;
+    text-indent: 45px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 12px;
+    background: url("../img/p.png") 113px -55px;
+}
+footer .modes .play-list:hover{
+    background-position-y:-86px;
+}
+
+/*播放列表盒子*/
+footer .play-list-box{
+    width: 50%;
+    height: 300px;
+    background-color: #fff;
+    color: #DDDDDD;
+    position: absolute;
+    bottom:-300px;
+    left: 25%;
+    border-radius:6px;
+    font-size: 12px;
+
+}
+footer .play-list-box .list-header{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 40px;
+    text-indent: 20px;
+    background:url("../img/p.png") 0px 0px;
+}
+footer .play-list-box ul{
+    background-color: #211E1D;
+    height: 260px;
+    overflow: scroll;/*出现滚动条*/
+}
+footer .play-list-box ul li{
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 20px;
+    cursor:pointer;
+    color: #afafaf;
+}
+footer .play-list-box ul li:hover{
+    background-color: #161313;
+    color: #fff;
+}
+footer .play-list-box ul li.active{
+    background-color: #000000;
+    color: #fff;
+}
+footer .play-list-box ul li span:nth-of-type(1){
+    float: left;
+ }
+footer .play-list-box ul li span:nth-of-type(2){
+    float: right;
+    margin-right: 20px;
+}
+footer .play-list-box ul li i{
+    width: 28px;
+    height: 28px;
+display: block;
+    float:right;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    margin-right: 40px;
+}
+.info{
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    border-radius: 6px;
+    border:1px solid #fff;
+    background-color: #211E1D;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 46px;
+    right: 80px;
+    z-index: 999;
+    display: none;
+}
+
+.mask{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+
+    background-position: center center;
+    filter:blur(5px);
+}
+/*控制条结束*/
+
+
